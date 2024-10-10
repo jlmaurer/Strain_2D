@@ -48,6 +48,7 @@ def filter_vectors_to_land_only(region, elon, nlat, e, n):
 
 
 def plot_rotation(rotation_array, station_vels, region, outdir, outfile,peak_max_shear = 300):
+    scalesize = get_map_scale(region)
     proj = 'M4i'
     fig = pygmt.Figure()
     pygmt.makecpt(cmap="magma", series=f"0/{peak_max_shear}/1", truncate="0.3/1.0", background="o", output=outdir+"/mycpt.cpt")
