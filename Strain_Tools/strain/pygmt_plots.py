@@ -100,7 +100,7 @@ def plot_dilatation(dila_array, station_vels, region, outdir, outfile, positive_
              pen='0.6p,black', direction=[[-200], [0]], offset="0.9i/0.1i")
     fig.text(x=region[0], y=region[2], text=f"{peak_dil} ns/yr", font='10p,Helvetica,black',
              offset='0.4i/0.1i')
-    fig.colorbar(position="JCR+w4.0i+v+o0.7i/0i", cmap=outdir+"/mycpt.cpt", truncate=f"-{peak_dil}/{peak_dil}",frame=["x50", "y+L\"Nanostr/yr\""])
+    fig.colorbar(position="JCR+w4.0i+v+o0.7i/0i", cmap=outdir+"/mycpt.cpt", truncate=f"0/{peak_dil}",frame=["x50", "y+L\"Nanostr/yr\""])
     print("Saving dilatation figure as %s." % outfile)
     fig.savefig(outfile)
     return
